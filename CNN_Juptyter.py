@@ -40,7 +40,7 @@ for total in range(0,10):
         value = np.asarray(img_file.getdata(), dtype=np.int).reshape(-1,height,width)
 
         value = value.flatten()
-        value = np.append(total,value)
+        value = np.append(total,value)#appending the labels to the pixel data
         with open("/etc/jupyter/symlinks_for_jupyterlab_widgets/Local Disk/Results/Check_New_Data.csv", 'a') as newimg:
             csv_writer = writer(newimg,lineterminator = '\n')
             csv_writer.writerow(value)
