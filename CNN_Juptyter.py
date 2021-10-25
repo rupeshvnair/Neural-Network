@@ -21,7 +21,7 @@ def ImageFileList(Location, format='.jpg'):
 
 
 
-
+#For Training Dataset
 for total in range(0,10):
     Chr=str(total)
     link = PurePath('/etc/jupyter/symlinks_for_jupyterlab_widgets/Local Disk/trainingSet/trainingSet/',Chr)
