@@ -68,7 +68,7 @@ spark = SparkSession \
     .getOrCreate()
 
 
-train = spark.read.format("csv").option("header", "false").load("gs://sparklearningnew/notebooks/jupyter/Check_Nw1_Data.csv")
+train = spark.read.format("csv").option("header", "false").load("gs://sparklearningnew/notebooks/jupyter/Check_New_Data.csv")
 test = spark.read.format("csv").option("header", "false").load("gs://sparklearningnew/notebooks/jupyter/Pred_Data.csv")
 
 
