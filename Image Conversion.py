@@ -14,6 +14,7 @@ def ImageFileList(Location, format='.jpg'):
                 fileList.append(PathName)
     return fileList
 
+#for training dataset
 for total in range(0,10):
     Chr=str(total)
     link = PurePath('C:/Users/Sreerupu/Desktop/Rupesh/MBA Classes/Semester 3/Subjects/Machine Learning and AI/Project/CNN/Data/MNIST/ActualtrainingSet/trainingSet/',Chr)
@@ -31,6 +32,8 @@ for total in range(0,10):
         value = np.asarray(img_file.getdata(), dtype=np.int).reshape(-1,height,width)
 
         value = value.flatten()
-        with open("C:/Users/Sreerupu/Desktop/Rupesh/MBA Classes/Semester 3/Subjects/Machine Learning and AI/Project/CNN/Data/Test/Check_Data.csv", 'a') as newimg:
+        value = np.append(total,value)
+
+        with open("C:/Users/Sreerupu/Desktop/Rupesh/MBA Classes/Semester 3/Subjects/Machine Learning and AI/Project/CNN/Data/Testing/T_Data3.csv", 'a') as newimg:
             csv_writer = writer(newimg,lineterminator = '\n')
             csv_writer.writerow(value)
