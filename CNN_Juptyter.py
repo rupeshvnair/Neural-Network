@@ -3,6 +3,14 @@ import numpy as np
 import os
 from pathlib import PurePath
 from csv import writer
+import pandas as pd
+import numpy as np
+import spark
+from csv import writer
+import seaborn as sns
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+%matplotlib inline
 
 !wget "https://raw.githubusercontent.com/rupeshvnair/BigDataMachinelearning/main/archive.zip"
 
@@ -95,15 +103,7 @@ print(Digit_Prediction.isnull().any().describe())
 
 !pip install tensorflow
 
-
-import pandas as pd
-import numpy as np
-import spark
-from csv import writer
-import seaborn as sns
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-%matplotlib inline
+#Importing Modules for Machine Learning
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
